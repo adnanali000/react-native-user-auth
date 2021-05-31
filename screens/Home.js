@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Alert,Text,View,StyleSheet,FlatList} from 'react-native';
+import {Alert,Text,View,StyleSheet,FlatList,TouchableWithoutFeedback,Keyboard} from 'react-native';
 import Header from '../components/Header';
 import Complains from '../components/Complains';
 import AddComplain from '../components/AddComplain'
@@ -34,6 +34,9 @@ const Home =()=>{
         
     }
     return(
+        <TouchableWithoutFeedback onPress={()=>{
+            Keyboard.dismiss();
+        }}>
          <View style={styles.container}>
              <Header />
              <View style={styles.content}>
@@ -47,7 +50,7 @@ const Home =()=>{
                 </View>
              </View>
          </View>
-        
+         </TouchableWithoutFeedback>
     );
 }
 
