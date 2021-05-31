@@ -26,7 +26,7 @@ const Signin = ({navigation})=>{
             : null
         }
         <Button title="SignIn" onPress={()=> signInFirebase() } />
-        <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Signup')}>
             <Text>Don't have an account ? Sign Up</Text>
         </TouchableOpacity>
     </>
