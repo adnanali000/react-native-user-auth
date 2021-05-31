@@ -3,6 +3,7 @@ import {Alert,Text,View,StyleSheet,FlatList,TouchableWithoutFeedback,Keyboard} f
 import Header from '../components/Header';
 import Complains from '../components/Complains';
 import AddComplain from '../components/AddComplain'
+import Sandbox from '../components/Sandbox'
 
 const Home =()=>{
     const [complains,setComplains] = useState([
@@ -34,6 +35,8 @@ const Home =()=>{
         
     }
     return(
+
+        //<Sandbox />
         <TouchableWithoutFeedback onPress={()=>{
             Keyboard.dismiss();
         }}>
@@ -62,9 +65,11 @@ const styles = StyleSheet.create({
      },
      content:{
         padding:40,
+        flex:1
      },
      list:{
          marginTop:20,
+         flex:1
      }
 
 })
