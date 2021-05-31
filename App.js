@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {createStackNavigator} from 'react-navigation-stack';
+import Signin from './screens/Signin'
+import Signup from './screens/Signup'
+import Home from './screens/Home'
+import {createAppContainer} from 'react-navigation'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Taj Corp.</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const stackNavigator = createStackNavigator({
+  Signup: Signup,
+  Signin : Signin,
+  Home : Home
 });
+
+
+const App = createAppContainer(stackNavigator);
+
+
+export default App;
+
